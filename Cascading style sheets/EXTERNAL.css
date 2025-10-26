@@ -1,0 +1,5 @@
+h1,h2,h3,h4,h5,h6{background-color:purple}
+
+*{font-weight:bold} #p1,#p3{background-color:aqua} #p4, .takeNote{font-style:italic} span.special{font-size:x-large} a:link{color:black} a:visited{color:yellow} a:hover{color:green} a:active{color:red}
+ul span{font-variant:small-caps} ul ol li{letter-spacing:1em}
+

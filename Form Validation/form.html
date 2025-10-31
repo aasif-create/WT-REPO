@@ -9,39 +9,4 @@
                 alert("Name must be filled out");
                 return false;
             }
-            var y = document.forms["myForm"]["email"].value;
-            if (y == null || y == "") {
-                alert("Email must be filled out");
-                return false;
-            }
-            var z = document.forms["myForm"]["country"].value;
-            if (z == -1) {
-                alert("Country must be selected");
-                return false;
-            }
-        }
-    </script>
-</head>
-<body>
-    <div class="form-container">
-        <h2>Registration Form</h2>
-        <form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
-            <label>Name</label>
-            <input type="text" name="fname" placeholder="Enter your name">
-
-            <label>Email</label>
-            <input type="text" name="email" placeholder="Enter your email">
-
-            <label>Country</label>
-            <select name="country">
-                <option value="-1" selected>[Choose Country]</option>
-                <option value="1">USA</option>
-                <option value="2">UK</option>
-                <option value="3">INDIA</option>
-            </select>
-
-            <input type="submit" value="Submit">
-        </form>
-    </div>
-</body>
-</html>
+        

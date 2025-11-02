@@ -1,4 +1,3 @@
-// index.js
 document.addEventListener("DOMContentLoaded",function(){
   const toggle = document.getElementById("toggleTheme");
   const showFacts = document.getElementById("showFacts");

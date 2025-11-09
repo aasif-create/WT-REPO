@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded",function(){
   const formResult=document.getElementById("formResult");
   const serverTime=document.getElementById("serverTime");
   const facts=[
-    "Full name: Cristiano Ronaldo dos Santos Aveiro",
+    "Full name: Cristiano-Ronaldo dos Santos Aveiro",
     "Born: 5 February 1985 in Funchal, Madeira",
     "Height: 1.87 m",
-    "Famous for powerful shots, free kicks, and athleticism"
+    "Famous for powerful-shots, free kicks, and athleticism"
   ];
   let factsVisible=false;
   toggle.addEventListener("click",()=>document.documentElement.classList.toggle("dark"));

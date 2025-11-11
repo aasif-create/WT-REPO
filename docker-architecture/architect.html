@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Docker Architecture</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <h1 class="title">Docker architecture and components</h1>
+    <div class="diagram">
+      <div class="col left">
+        <div class="card client">
+          <div class="card-title">Client</div>
+          <ul class="items">
+            <li>docker build</li>
+            <li>docker pull</li>
+            <li>docker run</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col center">
+        <svg class="arrow vertical" viewBox="0 0 20 60" preserveAspectRatio="xMidYMid meet">
+          <defs><marker id="m" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#9aa7bf"/></marker></defs>
+          <path d="M10 0 L10 60" stroke="#9aa7bf" stroke-width="2" marker-end="url(#m)" fill="none"/>
+        </svg>
+
+        <div class="host">
+          <div class="host-title">Docker host</div>
+          <div class="host-inner">
+            <div class="host-left">
+              <div class="small-box">Docker daemon</div>
+              <div class="small-box">Images</div>
+              <div class="small-box">Containers</div>
+            </div>
+            <div class="host-right">
+              <div class="registry-arrow">
+                <svg viewBox="0 0 80 60" preserveAspectRatio="xMidYMid meet">
+                  <defs><marker id="mr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#9aa7bf"/></marker></defs>
+                  <path d="M0 30 L70 30" stroke="#9aa7bf" stroke-width="2" marker-end="url(#mr)" fill="none"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <svg class="arrow vertical bottom" viewBox="0 0 20 60" preserveAspectRatio="xMidYMid meet">
+          <defs><marker id="m2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#9aa7bf"/></marker></defs>
+          <path d="M10 0 L10 60" stroke="#9aa7bf" stroke-width="2" marker-end="url(#m2)" fill="none"/>
+        </svg>
+      </div>
+
+      <div class="col right">
+        <div class="card registry">
+          <div class="card-title">Registry</div>
+          <ul class="items">
+            <li>Ubuntu</li>
+            <li>Openstack</li>
+            <li>NGINX</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item"><span class="dot"></span> client</div>
+      <div class="legend-item"><span class="dot host-dot"></span> host (daemon, images, containers)</div>
+      <div class="legend-item"><span class="dot"></span> registry</div>
+    </div>
+  </div>
+</body>
+</html>

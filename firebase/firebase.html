@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Firebase Architecture — Interactive Flowchart</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Firebase System Architecture</h1>
+    <p class="subtitle">Click any box to view details</p>
+  </header>
+
+  <main class="layout">
+    <section class="flow-column">
+      <div class="flow-wrap">
+
+        <div class="box node" data-title="User / Client" data-desc="Web or Mobile application used by the end user (browser or native app).">
+          <strong>User / Client</strong>
+          <small>(Web / Mobile App)</small>
+        </div>
+        <div class="connector"></div>
+
+        <div class="box node" data-title="Frontend" data-desc="Frontend built with HTML / CSS / JS that handles UI and user interactions.">
+          <strong>Frontend</strong>
+          <small>(HTML / CSS / JS)</small>
+        </div>
+        <div class="connector"></div>
+
+        <div class="box node highlighted" data-title="Backend / API" data-desc="Firebase backend/API that connects frontend to services: Realtime DB, Auth, Storage, Hosting, Messaging.">
+          <strong>Backend / API</strong>
+          <small>(Firebase)</small>
+        </div>
+        <div class="connector split"></div>
+
+        <div class="row-split">
+          <div class="box node" data-title="Auth Module" data-desc="Firebase Authentication: login, signup, social providers, token management.">
+            <strong>Auth Module</strong>
+            <small>(Firebase Auth)</small>
+          </div>
+
+          <div class="box node" data-title="Database" data-desc="Cloud Firestore / Realtime Database for storing and syncing app data in real time.">
+            <strong>Database</strong>
+            <small>(Firestore / Realtime DB)</small>
+          </div>
+        </div>
+
+        <div class="connector"></div>
+
+        <div class="box node" data-title="Cloud Storage / Hosting" data-desc="Static hosting and file storage (images, videos, assets) powered by Google Cloud Storage & Firebase Hosting.">
+          <strong>Cloud Storage / Hosting</strong>
+          <small>(Files & Deploy)</small>
+        </div>
+
+      </div>
+    </section>
+
+    <aside class="info-panel" id="infoPanel">
+      <h2 id="infoTitle">Select a box</h2>
+      <p id="infoDesc">Click any node in the flowchart to view a short description here.</p>
+
+      <div class="meta">
+        <div><strong>Tip:</strong> Use keyboard Tab to focus boxes, Enter to open.</div>
+      </div>
+
+      <div class="legend">
+        <h3>Legend</h3>
+        <ul>
+          <li><span class="legend-dot highlight"></span> Core Backend/API</li>
+          <li><span class="legend-dot"></span> Standard Node</li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <small>Firebase — conceptual architecture • created for notes & presentations</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

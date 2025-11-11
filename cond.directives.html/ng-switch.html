@@ -6,17 +6,14 @@
 </head>
 <body>
   <h2>AngularJS ng-switch Directive Example</h2>
-
   <div ng-app="">
     <p>Enter your Grade (A / B / C): <input type="text" ng-model="grade"></p>
-
     <div ng-switch="grade">
-      <p ng-switch-when="A">Excellent! 🎯</p>
-      <p ng-switch-when="B">Good Job! 👍</p>
-      <p ng-switch-when="C">Needs Improvement. 💪</p>
-      <p ng-switch-default>Invalid Grade. ❌</p>
+      <p ng-switch-when="A">Excellent!</p>
+      <p ng-switch-when="B">Good Job!</p>
+      <p ng-switch-when="C">Needs Improvement.</p>
+      <p ng-switch-default>Invalid Grade.</p>
     </div>
   </div>
-
 </body>
 </html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="success-box">
+        <h2>Details Submitted Successfully</h2>
+        <p><b>Name:</b> <span id="name"></span></p>
+        <p><b>Email:</b> <span id="email"></span></p>
+        <p><b>Country:</b> <span id="country"></span></p>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById("name").innerText = urlParams.get("name");
+        document.getElementById("email").innerText = urlParams.get("email");
+        document.getElementById("country").innerText = urlParams.get("country");
+    </script>
+</body>
+</html>

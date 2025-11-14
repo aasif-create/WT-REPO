@@ -140,3 +140,22 @@ input[type="submit"]:hover {
     font-size: 18px;
     margin: 10px 0;
 }
+.exit-btn {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff4da6, #ff0066);
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 12px #ff008c;
+}
+
+.exit-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff008c, 0 0 35px #ff0066;
+}
+

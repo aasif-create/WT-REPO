@@ -2,7 +2,9 @@
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 <body>
-<div ng-app="" ng-init="a=10; b=20">
+<div ng-app="">
+  <p>ENTER YOUR 1ST VALUE : <input type="number" ng-model ="a"></p>
+  <p>ENTER YOUR 2ND VALUE : <input type="number" ng-model ="b"></p>
   <h4>Expression Demo</h4>
   <p>Addition = {{ a + b }}</p>
   <p>Multiplication = {{ a * b }}</p>

@@ -1,21 +1,69 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            JSFORM VALIDATION
-        </title>
-        <link rel="stylesheets" href="jsform.css">
-    </head>
-    <body>
-        <form action="post" action="">
-        NAME : <input type="text" name="NAME">
-        EMAIL: <input type="email" name="EMAIL">
-        PASSWORD :  <input type="password" name="PASS">
-        AGE: <input type="number" name="AGE">
-         <input type="submit" name="SUBMIT">    
-        </form>
-    <script>
-        if(post)
-        {
-            NAME : "NAME";
-            
-        }
+<head>
+    <title>JS FORM VALIDATION</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        input { margin: 5px 0; padding: 5px; width: 200px; }
+        .error { color: red; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+<h2>JavaScript Form Validation</h2>
+
+<form id="myForm" onsubmit="return validateForm()">
+
+    NAME: <br>
+    <input type="text" id="name"><br>
+
+    EMAIL: <br>
+    <input type="email" id="email"><br>
+
+    PASSWORD: <br>
+    <input type="password" id="password"><br>
+
+    AGE: <br>
+    <input type="number" id="age"><br><br>
+
+    <input type="submit" value="SUBMIT">
+
+</form>
+
+<p id="errorMsg" class="error"></p>
+
+
+<script>
+function validateForm() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let pass = document.getElementById("password").value;
+    let age = document.getElementById("age").value;
+
+    let error = "";
+
+    if (name === "") {
+        error = "Name cannot be empty!";
+    } 
+    else if (email === "") {
+        error = "Email cannot be empty!";
+    }
+    else if (pass.length < 5) {
+        error = "Password must be at least 5 characters!";
+    }
+    else if (age <= 0) {
+        error = "Enter a valid age!";
+    }
+
+    if (error !== "") {
+        document.getElementById("errorMsg").innerHTML = error;
+        return false;
+    }
+
+    alert("Form Submitted Successfully!");
+    return true;
+}
+</script>
+
+</body>
+</html>
